@@ -54,6 +54,7 @@ module.exports = Object.freeze({
     client: 'pg',
     connection: env.DATABASE_URL || {
       host: '127.0.0.1',
+      port: 5432 || env.DATABASE_PORT,
       user: 'postgres',
       password: '',
       database: 'xprt',
