@@ -3,6 +3,7 @@
 [![Greenkeeper badge](https://badges.greenkeeper.io/FruitieX/backend-hipster-kit.svg)](https://greenkeeper.io/)
 
 Backend for XPRT project
+HundrED.org
 
 ## Documentation
 
