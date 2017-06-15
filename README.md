@@ -11,3 +11,6 @@ HundrED.org
 - [Deployment](/docs/DEPLOYMENT.md)
 - [Architecture](/docs/ARCHITECTURE.md)
 - [TODO](/docs/TODO.md)
+
+TODO:
+NODE_MODULES_CACHE=false
