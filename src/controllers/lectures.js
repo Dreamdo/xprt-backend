@@ -82,7 +82,7 @@ export const changeInvitationStatus = async (request, reply) => {
           to: teacher.email,
           subject: `Lecture invitation ${updatedLecture.status} by ${user.name}`,
           text: `${user.name} has ${updatedLecture.status} your lecture invitation.\n\n` +
-                'Manage your invitations in the XPRT mobile app' +
+                'Manage your invitations in the XPRT mobile app\n\n' +
                 'Best regards,\nThe XPRT team.',
         });
       })
@@ -164,7 +164,7 @@ export const createLecture = async (request, reply) => {
           to: expert.email,
           subject: 'Lecture invitation received',
           text: 'You have been sent a lecture invitation.\n\n' +
-                `Manage your invitations at ${config.frontendUrl}/profile` +
+                `Manage your invitations at ${config.frontendUrl}/profile\n\n` +
                 'Best regards,\nThe XPRT team.',
         });
       })
