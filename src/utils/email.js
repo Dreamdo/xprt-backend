@@ -11,7 +11,7 @@ export default function sendMail({ to, subject, text }) {
   const server = email.server.connect(smtp);
 
   return server.send({
-    from: smtp.user,
+    from: 'no-reply@xprt.fi',//smtp.user,
     to,
     subject,
     text,
