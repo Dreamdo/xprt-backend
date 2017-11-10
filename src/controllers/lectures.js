@@ -83,7 +83,7 @@ export const changeInvitationStatus = async (request, reply) => {
           subject: `Lecture invitation ${updatedLecture.status} by ${user.name}`,
           text: `${user.name} has ${updatedLecture.status} your lecture invitation.\n\n` +
                 'Manage your invitations in the XPRT mobile app\n\n' +
-                'Best regards,\nThe XPRT team.',
+                'Best regards,\n\nThe XPRT team.',
         });
       })
       .catch(err => console.log('Error while sending lecture change e-mail', err));
@@ -163,10 +163,10 @@ export const createLecture = async (request, reply) => {
         sendMail({
           to: expert.email,
           subject: 'Lecture invitation received',
-          text: `Hi ${expert.first_name}!\n\n` +
+          text: `Hi ${expert.name}!\n\n` +
                 'You have been sent a lecture invitation on XPRT.fi.\n\n' +
                 `Manage your invitations at ${config.frontendUrl}/profile\n\n` +
-                'Best regards,\nThe XPRT team.',
+                'Best regards,\n\nThe XPRT team.',
         });
       })
       .catch(err => console.log('Error while sending lecture invitation e-mail', err));
@@ -243,7 +243,7 @@ export const updateLecture = async (request, reply) => {
                 // TODO: more user friendly
                 `Changes: \n\n${changes}\n\n` +
                 `Manage your invitations at ${config.frontendUrl}/profile\n\n` +
-                'Best regards,\nThe XPRT team.',
+                'Best regards,\n\nThe XPRT team.',
         });
       })
       .catch(err => console.log('Error while sending lecture change e-mail', err));
