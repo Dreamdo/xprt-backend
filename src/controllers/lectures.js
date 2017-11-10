@@ -163,7 +163,8 @@ export const createLecture = async (request, reply) => {
         sendMail({
           to: expert.email,
           subject: 'Lecture invitation received',
-          text: 'You have been sent a lecture invitation.\n\n' +
+          text: `Hi ${expert.first_name}!\n\n` +
+                'You have been sent a lecture invitation on XPRT.fi.\n\n' +
                 `Manage your invitations at ${config.frontendUrl}/profile\n\n` +
                 'Best regards,\nThe XPRT team.',
         });
